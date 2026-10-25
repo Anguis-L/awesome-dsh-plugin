@@ -1,0 +1,8 @@
+url: https://github.com/Anguis-L/dsh-plugin-adoption
+name: Anguis-L/dsh-plugin-adoption
+category: tools
+tarball: https://github.com/Anguis-L/dsh-plugin-adoption/releases/download/v0.1.0/dsh-plugin-adoption-0.1.0.tgz
+description:
+  en: Ranks DSH plugins by real monthly npm downloads instead of GitHub stars, and flags the ones that star ordering under-rates.
+  zh: 按真实 npm 月下载量给 DSH 插件排名，而不是按 GitHub 星数，并标出被星数排序低估的插件。
+icon: https://raw.githubusercontent.com/Anguis-L/dsh-plugin-adoption/master/assets/icon-180.png
