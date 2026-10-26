@@ -3,6 +3,6 @@ name: Anguis-L/dsh-plugin-trust-audit
 category: security
 tarball: https://github.com/Anguis-L/dsh-plugin-trust-audit/releases/download/v0.3.0/dsh-plugin-trust-audit-0.3.0.tgz
 description:
-  en: Read-only audit of whether a DSH plugin's HTTP routes are actually fenced, discovering the registered routes by reading plugin code and probing loopback only.
-  zh: 只读审计 DSH 插件的 HTTP 路由是否真的做了鉴权栅栏：读插件代码找出真正注册的路由，仅对回环地址发起探测。
+  en: Read-only audit of whether a DSH plugin's HTTP routes are actually fenced, discovering the routes installed plugins really register by reading their code and probing loopback only. Route dispatch is longest-prefix-wins, so a plugin prefix longer than the kernel's /api runs before the kernel's own admission check, and whether such a route is reachable without credentials depends entirely on the plugin. It issues three GET probes per path - unauthenticated, cross-port Origin and cross-site Origin - and reports fenced, open, absent or unknown with the status codes observed. Every finding carries static fence evidence with line numbers; that evidence can only soften a verdict, never harden one, so a maintainer who did add a fence is never reported as careless.
+  zh: 只读审计 DSH 插件的 HTTP 路由是否真的做了鉴权栅栏：读插件代码找出真正注册的路由，仅对回环地址发起探测。路由分发是最长前缀优先，插件前缀长于内核的 /api 时会先于内核自身的准入检查执行，这类路由能否无凭据访问完全取决于插件本身。它对每条路径发三组 GET 探测——无凭据、跨端口 Origin、跨站 Origin——并按实际观测到的状态码判定 fenced / open / absent / unknown。每条发现附带带行号的静态鉴权证据；该证据只能软化判定、不能硬化，因此已经加了栅栏的维护者不会被误报成不在意安全。
 icon: https://raw.githubusercontent.com/Anguis-L/dsh-plugin-trust-audit/master/assets/icon-180.png
