@@ -1,8 +1,8 @@
 url: https://github.com/Anguis-L/dsh-plugin-adoption
 name: Anguis-L/dsh-plugin-adoption
-category: tools
+category: market
 tarball: https://github.com/Anguis-L/dsh-plugin-adoption/releases/download/v0.1.0/dsh-plugin-adoption-0.1.0.tgz
 description:
-  en: Ranks DSH plugins by real monthly npm downloads instead of GitHub stars, and flags the ones that star ordering under-rates.
-  zh: 按真实 npm 月下载量给 DSH 插件排名，而不是按 GitHub 星数，并标出被星数排序低估的插件。
+  en: Ranks DSH plugins by real monthly npm downloads instead of GitHub stars, and names the plugins that star ordering under-rates. On 424 plugins that have both numbers the rank correlation between stars and downloads is 0.551, so star ordering misplaces about half of them; this reports the shift rather than a single verdict. Complements health-audit tools by scoring a plugin on one hard signal - did people actually install it - rather than mixing maintenance, docs and ecosystem signals into one score. Read-only GETs, no HTTP route of its own, and it samples a bounded number of candidates because the catalog API allows 50 anonymous requests a day.
+  zh: 按真实 npm 月下载量给 DSH 插件排名，而不是按 GitHub 星数，并点名被星数排序低估的插件。在 424 个同时有两项数据的插件上，星数与下载量的排名相关只有 0.551，星数排序大约会排错一半；本插件报告的是「错位幅度」，而不是给一个综合结论。它和生态体检类工具是互补关系：那一类把维护、文档、生态等信号混成一个分数，这一类只用一个硬信号——到底有没有人真装过。只发只读 GET，自身不注册 HTTP 路由；catalog 接口匿名限额每天 50 次，因此默认只采样有限数量的候选。
 icon: https://raw.githubusercontent.com/Anguis-L/dsh-plugin-adoption/master/assets/icon-180.png
